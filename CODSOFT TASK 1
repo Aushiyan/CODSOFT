@@ -1,0 +1,33 @@
+//NUMBER GAME
+import java.util.*;
+import java.math.*;
+import java.util.Scanner;
+public class numbergame
+{
+	public static void main(String[] args)
+	{
+		int number = (int)(Math.random()*100);
+		Scanner sc = new Scanner(System.in);
+		int userchoice = 0;
+		do
+		{
+			System.out.println("ENTER THE NUMBER BETWEEN 1-100");
+			userchoice=sc.nextInt();
+			if(userchoice==number)
+			{
+				System.out.println("YOU HAVE GUESSED THE RIGHT NUMBER....");
+				break;
+			}
+			else if (userchoice> number)
+			{
+				System.out.println("THE NUMBER ENTERED IS LARGE.....");
+			}
+			else
+			{
+				System.out.println("THE NUMBER ENTERED IS SMALL.....");
+			}
+		}while(userchoice>0);
+		System.out.println("THE GAME IS ENDED......THANK YOU!!!!!!!!");
+		
+	}
+}
